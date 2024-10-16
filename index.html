@@ -3,9 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio Navigation Example</title>
+    <title>Aleksandar Vitanov's Portfolio</title>
     <link rel="stylesheet" href="styling.css">
 </head>
+
 <body>
     <!-- Header Section -->
     <header class="main-header">
@@ -18,7 +19,6 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#resume">Resume</a></li>
                 <li><a href="#works">Works</a></li>
-                <li><a href="#testimonials">Testimonials</a></li>
                 <li><a href="#contact">Contact</a></li>
             </ul>
         </nav>
@@ -26,94 +26,107 @@
 
     <!-- Main Sections -->
     <section id="home" class="section">
+        <h1>I'm Aleksandar Vitanov</h1>
         <h1>Welcome to My Portfolio</h1>
-        <p>Explore my works and experience.</p>
+        <p>I'm from Bulgaria, a student at KDG, a sports enthusiast, and a music lover. Let's start scrolling and learn more about me.</p>
     </section>
     <section id="about" class="section">
-        <h2>About Me</h2>
-        <p>This is the about section where you can describe yourself.</p>
+        <div class="about-wrapper">
+            <div class="about-content">
+                <h2>About Me</h2>
+                <p>I am a friendly individual with good communication skills. I love watching and playing sports. I am also a retired professional diver who qualified twice for the Junior Diving World Championship and participated twice in the European Junior Diving Championship!</p>
+            </div>
+            <div class="about-image">
+                <img src="PNGS/_MG_4022.jpg" alt="About Me Picture">
+            </div>
+        </div>
     </section>
     <section id="resume" class="section">
-        <h2>Resume</h2>
-        <p>Highlight your skills and experience here.</p>
+        <div class="resume-wrapper">
+            <h2>Resume</h2>
+            <div class="resume-section">
+                <h3>Education</h3>
+                <p><strong>Student in Karl De Grote (KdG) - Belgium, Antwerp.</strong></p>
+                <p><em>Third year bachelor of Multimedia and Creative Technologies program.</em></p>
+                <p><em>Currently on an Erasmus program for the first semester in IADE university - Portugal, Lisbon.</em></p>
+            </div>            
+            <hr class="section-divider">
+            <div class="resume-section">
+                <h3>Work Experience</h3>
+                <p><em>1. Machine driver in company called "Katoen Natie" in Belgium</em></p>
+                <p><em>2. Server in a sweets caffee in Bulgaria</em></p>
+                <p><em>3. DHL Delivery Driver in Belgium</em></p>
+            </div>
+            <hr class="section-divider">
+            <div class="resume-section skills-section">
+                <h3>Skills</h3>
+                <div class="skill-item">
+                    <span>Photoshop</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 40%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span>Illustrator</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 20%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span>HTML & CSS</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 65%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span>Blender</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 80%;"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <span>Adobe Premiere Pro</span>
+                    <div class="skill-bar">
+                        <div class="skill-level" style="width: 90%;"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <section id="works" class="section">
         <h2>Works</h2>
-        <p>Showcase your portfolio projects here.</p>
-    </section>
-    <section id="testimonials" class="section">
-        <h2>Testimonials</h2>
-        <p>Display testimonials from clients or colleagues.</p>
-    </section>
+        
+        <div class="works-list"> <!-- Use a container for the work items -->
+            <div class="work-item">
+                <a href="uiux_design.html" class="project-button">UI/UX Design for School Chair</a>
+            </div>
+            <div class="work-item">
+                <a href="parking_app.html" class="project-button">Web Coding Project: Parking App Landing Page</a>
+            </div>
+            <div class="work-item">
+                <a href="animation_project.html" class="project-button">KDG Man Animation</a>
+            </div>
+            <div class="work-item">
+                <a href="story_project.html" class="project-button">What If Story Project</a>
+            </div>
+        </div>
+    </section>      
     <section id="contact" class="section">
         <h2>Contact</h2>
-        <p>Include your contact details or a contact form.</p>
+        
     </section>
 
-    <!-- Navigation Arrows -->
+    <!-- Navigation Buttons -->
     <div class="nav-buttons">
-        <!-- Replace these src paths with your actual arrow image paths -->
-        <img id="upArrow" src="PNGS/arrowUp.png" alt="Up Arrow" class="arrow-button hidden">
-        <img id="downArrow" src="PNGS/arrowDown.png" alt="Down Arrow" class="arrow-button">
+        <a href="#" id="upLink" class="nav-button">↑</a>
+        <a href="#" id="downArrowLink" class="nav-button">↓</a>
     </div>
 
     <!-- Footer -->
     <footer class="main-footer">
-        <p>&copy; 2024 Your Name. All Rights Reserved.</p>
+        <p>© 2024 Your Name. All Rights Reserved.</p>
     </footer>
 
-    <!-- JavaScript for Arrow Navigation -->
-    <script>
-        // Get references to each section and arrow buttons
-        const sections = document.querySelectorAll('.section');
-        const upArrow = document.getElementById('upArrow');
-        const downArrow = document.getElementById('downArrow');
-
-        // Track the current section index
-        let currentSectionIndex = 0;
-
-        // Function to scroll to a specific section
-        function scrollToSection(sectionIndex) {
-            sections[sectionIndex].scrollIntoView({ behavior: 'smooth' });
-        }
-
-        // Event listener for the down arrow
-        downArrow.addEventListener('click', () => {
-            if (currentSectionIndex < sections.length - 1) {
-                currentSectionIndex++;
-                scrollToSection(currentSectionIndex);
-                updateArrowsVisibility();
-            }
-        });
-
-        // Event listener for the up arrow
-        upArrow.addEventListener('click', () => {
-            if (currentSectionIndex > 0) {
-                currentSectionIndex--;
-                scrollToSection(currentSectionIndex);
-                updateArrowsVisibility();
-            }
-        });
-
-        // Function to update visibility of the up arrow
-        function updateArrowsVisibility() {
-            // Show or hide up arrow based on the current section index
-            if (currentSectionIndex === 0) {
-                upArrow.classList.add('hidden');
-            } else {
-                upArrow.classList.remove('hidden');
-            }
-
-            // Show or hide down arrow based on the current section index
-            if (currentSectionIndex === sections.length - 1) {
-                downArrow.classList.add('hidden');
-            } else {
-                downArrow.classList.remove('hidden');
-            }
-        }
-
-        // Initially hide the up arrow since we start at the top
-        updateArrowsVisibility();
-    </script>
+   
 </body>
 </html>

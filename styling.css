@@ -9,7 +9,10 @@ body {
     font-family: 'Montserrat', sans-serif;
     line-height: 1.6;
     color: #333;
-    overflow-x: hidden; /* Prevent horizontal scrolling */
+    overflow-x: hidden;
+}
+html {
+    scroll-behavior: smooth; 
 }
 
 /* Header Styling */
@@ -26,13 +29,11 @@ body {
     z-index: 100;
 }
 
-/* Centering the Logo */
 .logo {
     position: absolute;
     left: 20px;
 }
 
-/* Navigation Styling */
 .navbar {
     text-align: center;
 }
@@ -57,31 +58,285 @@ body {
     color: #fddb00;
 }
 
-/* Section Styling - Full Page View */
+/* Section Styling */
 .section {
-    height: 100vh;
+    min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     flex-direction: column;
-    padding: 20px;
+    padding: 40px 20px;
     background-color: #f4f4f4;
     border-bottom: 1px solid #ddd;
     text-align: center;
 }
-
+/* Home */
 #home {
-    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center; /* Horizontal centering */
+    align-items: center; /* Vertical centering */
+    height: 100vh; /* Full viewport height */
+    background-color: #e0e0e0; /* Background color */
+    flex-direction: column; /* Stack elements vertically */
+    text-align: center; /* Ensure text is centered */
+}
+/* Specific styles for the home section heading */
+#home h1:first-of-type {
+    font-size: 64px; 
+    font-weight: bold; 
+    color: #333; 
+    margin-bottom: 20px; 
 }
 
-h1, h2 {
+
+/* About Section Styling */
+.about-wrapper {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    margin-top: 20px;
+}
+
+.about-content {
+    max-width: 500px;
+    margin-right: 50px;
+}
+
+.about-content h2 {
+    text-align: left;
+    font-size: 32px;
+    font-weight: bold;
     margin-bottom: 20px;
-    font-weight: 700;
 }
 
-p {
-    max-width: 800px; /* Limit the width of paragraphs */
-    margin: 0 auto;
+.about-content p {
+    text-align: left;
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+}
+
+.about-image img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 5px solid #333;
+}
+
+/* Resume Section Styling */
+.resume-wrapper {
+    max-width: 900px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+
+.resume-wrapper h2 {
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    margin-bottom: 40px;
+}
+
+.resume-section {
+    margin-bottom: 40px;
+}
+
+.resume-section h3 {
+    font-size: 26px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.resume-section p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+/* Skills Section */
+.skills-section {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.skill-item {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.skill-item span {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.skill-bar {
+    width: 100%;
+    background-color: #9d9d9d;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 5px;
+}
+
+.skill-level {
+    height: 20px;
+    background-color: #4caf50;
+    border-radius: 5px;
+}
+
+/* CSS for the "Works" Section - Styled Buttons and Descriptions */
+
+/* Container for the works section items */
+.works-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; 
+    max-width: 800px; 
+    margin: 0 auto; 
+    text-align: left; 
+}
+
+/* Individual work item container */
+.work-item {
+    margin: 20px 0; 
+}
+
+/* Button-like link for each work project */
+.work-item a {
+    display: inline-block;
+    padding: 10px 20px; 
+    background-color: #007BFF; 
+    color: #fff; 
+    font-weight: bold; 
+    text-decoration: none; 
+    border-radius: 5px; 
+    transition: background-color 0.3s ease; 
+}
+
+/* Hover effect for the buttons */
+.work-item a:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Description under each button */
+.work-item p {
+    margin-top: 5px; 
+    color: #555; 
+    font-size: 14px; 
+}
+
+/* Specific styles for UI/UX project page */
+#uiux-project {
+    padding: 40px;
+    background-color: #f9f9f9;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+.project-image {
+    max-width: 100%; /* Ensures the image is responsive */
+    height: auto; /* Keeps the aspect ratio */
+    display: block; /* Centers the image */
+    margin: 20px auto; /* Adds margin above and below, centers it horizontally */
+}
+
+#uiux-project h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#uiux-project p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+/* Specific styles for Parking App project page */
+#parking-app-project {
+    padding: 40px;
+    background-color: #f9f9f9;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+.project-image {
+    max-width: 100%; 
+    height: auto; 
+    display: block; 
+    margin: 20px auto; 
+}
+
+#parking-app-project h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#parking-app-project p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+/* Back button styling */
+.back-button {
+    display: inline-block;
+    margin: 20px 0;
+    padding: 10px 20px;
+    background-color: #222;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+}
+/* Specific styles for Animation Project page */
+#animation-project {
+    padding: 40px;
+    background-color: #f9f9f9;
+    max-width: 900px;
+    margin: auto;
+    text-align: left;
+}
+
+/* Responsive styling for embedded video */
+#animation-project iframe {
+    max-width: 100%; /* Ensures the video is responsive */
+    height: auto; /* Maintains aspect ratio */
+    display: block; /* Centers the video */
+    margin: 20px auto; /* Adds margin and centers horizontally */
+}
+
+#animation-project h2 {
+    font-size: 32px;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+#animation-project p {
+    font-size: 18px;
+    line-height: 1.6;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+
+.back-button:hover {
+    background-color: #fddb00; /* Highlight color on hover */
+    color: #222;
+}
+
+/* Divider between sections */
+.section-divider {
+    border: none;
+    border-bottom: 1px solid #ccc;
+    margin: 20px 0;
 }
 
 /* Footer Styling */
@@ -96,31 +351,31 @@ p {
     font-size: 14px;
 }
 
-/* Arrow Button Styling */
+/* Navigation Button Styling */
 .nav-buttons {
     position: fixed;
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     pointer-events: none;
 }
 
-.arrow-button {
-    pointer-events: auto; /* Enable click events */
+.nav-button {
+    pointer-events: auto;
     cursor: pointer;
-    position: fixed;
-    left: calc(50% - 25px); /* Center arrow */
-    width: 50px;
-    height: 50px;
+    font-size: 32px;  /* Button font size */
+    margin: 20px; /* Space between buttons */
+    text-decoration: none; /* Remove underline */
+    color: #f1c40f; /* Button color */
     transition: transform 0.3s ease;
 }
 
-#upArrow {
-    top: 80px; /* Position at the top */
+#upLink {
+    top: 10%;  /* Positioning for up button */
 }
 
-#downArrow {
-    bottom: 10px; /* Position at the bottom */
+#downArrowLink {
+    bottom: 10%;  /* Positioning for down button */
 }
 
 /* Hide Up Arrow Initially */
@@ -128,6 +383,7 @@ p {
     display: none;
 }
 
-.arrow-button:hover {
-    transform: scale(1.1);
+/* Adjustments for better spacing on other sections */
+#home, #works, #contact {
+    padding: 40px 20
 }
