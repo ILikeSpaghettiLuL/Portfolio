@@ -25,12 +25,20 @@
     </header>
 
     <!-- Main Sections -->
-    <section id="home" class="section">
+    <section id="home" class="section" style="position: relative;">
         <h1>I'm Aleksandar Vitanov</h1>
         <h1>Welcome to My Portfolio</h1>
         <p>I'm from Bulgaria, a student at KDG, a sports enthusiast, and a music lover. Let's start scrolling and learn more about me.</p>
+        
+        <!-- Down Arrow to About Section -->
+        <div class="section-nav" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);">
+            <a href="#about" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowDown.png" alt="Down Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
     </section>
-    <section id="about" class="section">
+
+    <section id="about" class="section" style="position: relative;">
         <div class="about-wrapper">
             <div class="about-content">
                 <h2>About Me</h2>
@@ -40,8 +48,23 @@
                 <img src="PNGS/_MG_4022.jpg" alt="About Me Picture">
             </div>
         </div>
+
+        <!-- Up Arrow to Home Section -->
+        <div class="section-nav" style="position: absolute; top: 100px; left: 50%; transform: translateX(-50%);">
+            <a href="#home" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowUp.png" alt="Up Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
+
+        <!-- Down Arrow to Resume Section -->
+        <div class="section-nav" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);">
+            <a href="#resume" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowDown.png" alt="Down Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
     </section>
-    <section id="resume" class="section">
+
+    <section id="resume" class="section" style="position: relative;">
         <div class="resume-wrapper">
             <h2>Resume</h2>
             <div class="resume-section">
@@ -49,12 +72,12 @@
                 <p><strong>Student in Karl De Grote (KdG) - Belgium, Antwerp.</strong></p>
                 <p><em>Third year bachelor of Multimedia and Creative Technologies program.</em></p>
                 <p><em>Currently on an Erasmus program for the first semester in IADE university - Portugal, Lisbon.</em></p>
-            </div>            
+            </div>
             <hr class="section-divider">
             <div class="resume-section">
                 <h3>Work Experience</h3>
                 <p><em>1. Machine driver in company called "Katoen Natie" in Belgium</em></p>
-                <p><em>2. Server in a sweets caffee in Bulgaria</em></p>
+                <p><em>2. Server in a sweets cafe in Bulgaria</em></p>
                 <p><em>3. DHL Delivery Driver in Belgium</em></p>
             </div>
             <hr class="section-divider">
@@ -92,11 +115,26 @@
                 </div>
             </div>
         </div>
+        
+        <!-- Up Arrow to About Section -->
+        <div class="section-nav" style="position: absolute; top: 100px; left: 50%; transform: translateX(-50%);">
+            <a href="#about" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowUp.png" alt="Up Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
+        
+        <!-- Down Arrow to Works Section -->
+        <div class="section-nav" style="position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);">
+            <a href="#works" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowDown.png" alt="Down Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
     </section>
-    <section id="works" class="section">
+
+    <section id="works" class="section" style="position: relative;">
         <h2>Works</h2>
         
-        <div class="works-list"> <!-- Use a container for the work items -->
+        <div class="works-list">
             <div class="work-item">
                 <a href="uiux_design.html" class="project-button">UI/UX Design for School Chair</a>
             </div>
@@ -110,23 +148,56 @@
                 <a href="story_project.html" class="project-button">What If Story Project</a>
             </div>
         </div>
-    </section>      
-    <section id="contact" class="section">
-        <h2>Contact</h2>
         
+        <!-- Up Arrow to Resume Section -->
+        <div class="section-nav" style="position: absolute; top: 100px; left: 50%; transform: translateX(-50%);">
+            <a href="#resume" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowUp.png" alt="Up Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
+        
+        <!-- Down Arrow to Contact Section -->
+        <div class="section-nav" style="position: absolute; bottom: 100px; left: 50%; transform: translateX(-50%);">
+            <a href="#contact" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowDown.png" alt="Down Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
     </section>
 
-    <!-- Navigation Buttons -->
-    <div class="nav-buttons">
-        <a href="#" id="upLink" class="nav-button">↑</a>
-        <a href="#" id="downArrowLink" class="nav-button">↓</a>
-    </div>
-
-    <!-- Footer -->
-    <footer class="main-footer">
-        <p>© 2024 Your Name. All Rights Reserved.</p>
-    </footer>
-
-   
-</body>
-</html>
+    <section id="contact" class="section" style="position: relative; text-align: center; padding: 50px;">
+        <h2>Contact</h2>
+        
+        <p style="margin: 20px 0;">If you have any questions or want to connect, feel free to reach out!</p>
+        
+        <div style="display: flex; align-items: center; justify-content: center; margin: 10px 0;">
+            <img src="PNGS/Gmail_Logo_512px.png" alt="Email Icon" style="width: 24px; height: auto; margin-right: 8px;">
+            <strong>Email:</strong> 
+            <a href="mailto:aleks.vitanov@gmail.com" style="color: blue; text-decoration: underline;">aleks.vitanov@gmail.com</a>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: center; margin: 10px 0;">
+            <img src="PNGS/avbkmq5ma.png" alt="Phone Icon" style="width: 24px; height: auto; margin-right: 8px;">
+            <strong>Phone:</strong> 
+            <a href="tel:+359879534030" style="color: blue; text-decoration: underline;">+359879534030</a>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: center; margin: 10px 0;">
+            <img src="PNGS/facebook-circle-logo-png.png" alt="Facebook Icon" style="width: 24px; height: auto; margin-right: 8px;">
+            <strong>Facebook:</strong> 
+            <a href="https://www.facebook.com/profile.php?id=100002561619257" target="_blank" style="color: blue; text-decoration: underline;">Profile</a>
+        </div>
+        
+        <div style="display: flex; align-items: center; justify-content: center; margin: 10px 0;">
+            <img src="PNGS/Instagram_icon.png" alt="Instagram Icon" style="width: 24px; height: auto; margin-right: 8px;">
+            <strong>Instagram:</strong> 
+            <a href="https://www.instagram.com/a_vitanovvv" target="_blank" style="color: blue; text-decoration: underline;">@a_vitanovvv</a>
+        </div>
+    
+        <!-- Up Arrow to Works Section -->
+        <div class="section-nav" style="position: absolute; top: 100px; left: 50%; transform: translateX(-50%);">
+            <a href="#works" style="background: transparent; z-index: 10;">
+                <img src="PNGS/arrowUp.png" alt="Up Arrow" style="width: 40px; height: auto;">
+            </a>
+        </div>
+    </section>
+    

@@ -385,5 +385,70 @@ html {
 
 /* Adjustments for better spacing on other sections */
 #home, #works, #contact {
-    padding: 40px 20
+    padding: 40px 
 }
+/* Modal Styles */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.modal:target {
+    display: block;
+}
+
+.modal-content {
+    background-color: #fff; /* or use your preferred color */
+    color: #000; /* or use your text color */
+    margin: 5% auto;
+    padding: 20px;
+    border-radius: 10px;
+    width: 80%;
+    text-align: center;
+}
+
+.modal h2,
+.modal p {
+    margin-top: 20px;
+}
+
+.modal p {
+    text-align: justify;
+}
+
+.modal-content img {
+    width: 100%;
+    height: auto;
+}
+
+.close {
+    color: #000; /* or your preferred color */
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.close:hover,
+.close:focus {
+    color: #f00; /* or your hover color */
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive iframe styles */
+.modal-content iframe {
+    width: 100%;
+    height: 100%;
+    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
+    border: 0; /* Remove default border */
+}
+
+
